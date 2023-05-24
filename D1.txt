@@ -1,0 +1,9 @@
+Domanda 1:
+E l'insieme di passi necessari per risolvere un problema esistente. 
+
+Domanda 2:
+Una variabile e un contenitore di dati che possono come dice il suo nome variare nel tempo.
+
+Domanda 3:
+Credo che null voglia dire un valore non assegnato, mentre undefined e proprio una variabile o valore inesistenti
+
