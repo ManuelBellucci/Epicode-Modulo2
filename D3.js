@@ -65,12 +65,10 @@ if (num < 5) {
 let text = ''; // creo una stringa vuota
 
 for (let i = 0; i <= 10; i++) { // inizio il ciclo for per i numeri fino il 10 incluso
-  if (i === 3) {
+  if (i === 3 || i === 8) {
     continue; // gli dico ''se trovi il 3, saltalo''
   }
-  if (i === 8) {
-    continue; // gli dico ''se trovi l'8, saltalo''
-  }
+
 
   text = text + ' ' + i; // concateno la stringa con uno spazio e con il valore corrente, fino la fine del ciclo for.
 }
@@ -138,16 +136,16 @@ C'è una promozione in corso: se il totale del carrello supera 50, l'utente ha d
 Crea un algoritmo che determini l'ammontare totale che deve essere addebitato all'utente per il checkout.
 */
 
-let totalShoppingCart = 50; // creo una variabile per l'importo del carrello
+let totalShoppingCart = 40; // creo una variabile per l'importo del carrello
 let totalCheckout = 0; // imposto il conteggio del checkout a 0
-const spedizione = 10; // creo la costante di spedizione, che sarà sempre di 10 euro
+const spedizione = 10; // creo la costante di spedizione, che sarà sempre di 10 €
 
-if(totalShoppingCart < 50) { // creo un if statement per i carrelli che spendono meno di 50 euro 
-  totalCheckout = totalShoppingCart + spedizione // il checkout sarà il totale del carello più i 10 euro di spedizione
-  console.log('il totale dell\'ordine è di', totalShoppingCart, 'euro +', spedizione, 'euro di spedizione. Se spende altri', 50 - totalShoppingCart, 'euro la spedizione è gratuita'); // stampo il risultato
-} else { // creo un else statement per i carelli che spendono più di 50 euro
+if(totalShoppingCart < 50) { // creo un if statement per i carrelli che spendono meno di 50 € 
+  totalCheckout = totalShoppingCart + spedizione // il checkout sarà il totale del carello più i 10 € di spedizione
+  console.log(`il totale dell'ordine è di ${totalShoppingCart}€ più ${spedizione}€ di spedizione. Se spende altri ${50 - totalShoppingCart}€ la spedizione è gratuita`); // stampo il risultato
+} else { // creo un else statement per i carelli che spendono più di 50 €
   totalCheckout = totalShoppingCart // il checkout sarà solamente il totale del carrello, senza aggiungere la spedizione
-  console.log('il totale dell\'ordine è di', totalShoppingCart, 'euro. Spedizione gratuita per ordine superiore ai 50 euro') // stampo il risultato
+  console.log(`il totale dell'ordine è di ${totalShoppingCart}€. Spedizione gratuita per ordine superiore ai 50 €`) // stampo il risultato
 }
 
 
@@ -159,23 +157,19 @@ if(totalShoppingCart < 50) { // creo un if statement per i carrelli che spendono
   Modifica la risposta precedente includendo questa nuova promozione nell'algoritmo, determinando, usando l'algoritmo del codice precedente, se le spedizioni siano gratuite oppure no e e calcolando il totale.
 */
 
-let totalShoppingCart2 = 63;
-let offerTotalShoppingCart2 = totalShoppingCart2*0.8
+let totalShoppingCart2 = 40;
+let offerTotalShoppingCart2 = (totalShoppingCart2*0.8).toFixed(2);
 let totalCheckout2 = 0;
 const spedizione2 = 10;
 
 if(offerTotalShoppingCart2 < 50) {
   totalCheckout2 = offerTotalShoppingCart2 + spedizione2 
-  console.log('il totale dell\'ordine è di', offerTotalShoppingCart2, 'euro +', spedizione2, 'euro di spedizione. Se spende altri', (50 - offerTotalShoppingCart2).toFixed(2), 'euro la spedizione è gratuita');
+  console.log('il totale dell\'ordine è di', offerTotalShoppingCart2, '€ +', spedizione2, '€ di spedizione. Se spende altri', 50 - offerTotalShoppingCart2, '€ la spedizione è gratuita');
 } else {
   totalCheckout2 = offerTotalShoppingCart2
-  console.log('il totale dell\'ordine è di', offerTotalShoppingCart2, 'euro. Spedizione gratuita per ordine superiore ai 50 euro')
+  console.log('il totale dell\'ordine è di', offerTotalShoppingCart2, '€. Spedizione gratuita per ordine superiore ai 50 €')
 }
 console.log('Prodotto:', totalShoppingCart2,',', 'prodotto scontato:', offerTotalShoppingCart2)
-
-
-
-
 
 
 
@@ -185,7 +179,7 @@ console.log('Prodotto:', totalShoppingCart2,',', 'prodotto scontato:', offerTota
   Es. se isMale e' vero, il valore di gender deve essere "male"
 */
 
-isMale = false;
+let isMale = false;
 let gender = isMale ? "male" : "female";
 console.log(gender);
 
