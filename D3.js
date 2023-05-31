@@ -18,7 +18,8 @@ console.log(piuGrande)
   //EXTRA: versione con meno codice
 
 let numeri2 = [23, 86, 78, 101, 1, 34, 956, 31]; // dichiariamo l'array con i numeri interi da analizzare
-console.log(Math.max(...numeri2)) // usiamo il metodo Math.max(...nomeArray) per trovare il valore più alto
+let piuGrande2 = Math.max(...numeri2);
+console.log(piuGrande2) // usiamo il metodo Math.max(...nomeArray) per trovare il valore più alto
  
 
 
@@ -158,14 +159,14 @@ if(totalShoppingCart < 50) { // creo un if statement per i carrelli che spendono
   Modifica la risposta precedente includendo questa nuova promozione nell'algoritmo, determinando, usando l'algoritmo del codice precedente, se le spedizioni siano gratuite oppure no e e calcolando il totale.
 */
 
-let totalShoppingCart2 = 62;
+let totalShoppingCart2 = 63;
 let offerTotalShoppingCart2 = totalShoppingCart2*0.8
 let totalCheckout2 = 0;
 const spedizione2 = 10;
 
 if(offerTotalShoppingCart2 < 50) {
   totalCheckout2 = offerTotalShoppingCart2 + spedizione2 
-  console.log('il totale dell\'ordine è di', offerTotalShoppingCart2, 'euro +', spedizione2, 'euro di spedizione2. Se spende altri', (50 - offerTotalShoppingCart2).toFixed(2), 'euro la spedizione è gratuita');
+  console.log('il totale dell\'ordine è di', offerTotalShoppingCart2, 'euro +', spedizione2, 'euro di spedizione. Se spende altri', (50 - offerTotalShoppingCart2).toFixed(2), 'euro la spedizione è gratuita');
 } else {
   totalCheckout2 = offerTotalShoppingCart2
   console.log('il totale dell\'ordine è di', offerTotalShoppingCart2, 'euro. Spedizione gratuita per ordine superiore ai 50 euro')
