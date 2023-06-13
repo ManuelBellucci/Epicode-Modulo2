@@ -199,13 +199,13 @@ let len5 = numeri5.length; // ottenere la lunghezza dell'array dopo l'inseriment
 console.log(numeri5); // stampo l'array
 
 for (let i = 0; i < len5; i++) {
-  if (numeri5[i] % 3 === 0 && numeri5[i] % 5 === 0) {
-    console.log(numeri5[i], "FizzBuzz"); // se è multiplo di 3 e 5 (modulo e && AND) stampa FizzBuzz
+  if (numeri5[i] % 15 === 0) {
+    console.log("FizzBuzz"); // se è multiplo di 3 e 5 (modulo e && AND) stampa FizzBuzz
   } else if (numeri5[i] % 3 === 0) {
-    console.log(numeri5[i], "Fizz"); // se è multiplo di 3 stampa Fizz
+    console.log("Fizz"); // se è multiplo di 3 stampa Fizz
   } else if (numeri5[i] % 5 === 0) {
-    console.log(numeri5[i], "Buzz"); // se è multiplo di 5 stampa Buzz
+    console.log("Buzz"); // se è multiplo di 5 stampa Buzz
   } else {
-    console.log(numeri5[i], "non è multiplo nè di 3 nè di 5"); // non è multiplo nè di 3 nè di 5
+    console.log(numeri5[i]); // non è multiplo nè di 3 nè di 5
   }
 }
